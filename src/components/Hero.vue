@@ -48,7 +48,7 @@ const scrollToContact = () => {
       <div class="mb-8 animate-fade-in-up opacity-0" style="animation-delay: 100ms">
         <StatusIndicator :offset="[12, 22]">
           <img
-            src="https://github.com/ElBigodon.png"
+            src="https://github.com/muassab.png"
             alt="Alexandre Tiriba"
             class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-accent object-cover"
           />
