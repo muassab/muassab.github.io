@@ -5,7 +5,7 @@ import StatusIndicator from './ui/StatusIndicator.vue'
 const socialLinks: SocialLink[] = [
   {
     name: 'GitHub',
-    url: 'https://github.com/ElBigodon',
+    url: 'https://github.com/muassab',
     icon: 'lucide:github'
   },
   {

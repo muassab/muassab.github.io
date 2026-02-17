@@ -25,7 +25,7 @@ const handleSubmit = async () => {
 
 const contactInfo = [
   { icon: 'lucide:mail', label: 'Email', value: 'alexandremuassab@gmail.com', href: 'mailto:alexandremuassab@gmail.com' },
-  { icon: 'lucide:github', label: 'GitHub', value: 'github.com/ElBigodon', href: 'https://github.com/muassab', external: true },
+  { icon: 'lucide:github', label: 'GitHub', value: 'github.com/muassab', href: 'https://github.com/muassab', external: true },
   { icon: 'lucide:linkedin', label: 'LinkedIn', value: 'Alexandre Muassab', href: 'https://www.linkedin.com/in/alexandre-muassab-46607b216/', external: true },
   { icon: 'lucide:map-pin', label: 'Localização', value: 'Salvador, Bahia - Brasil' }
 ]

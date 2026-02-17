@@ -64,7 +64,7 @@ bun run preview
 
 O portfólio é automaticamente deployado no GitHub Pages através de GitHub Actions.
 
-**URL:** [https://elbigodon.github.io/](https://elbigodon.github.io/)
+**URL:** [https://muassab.github.io/](https://muassab.github.io/)
 
 ## 📄 Licença
 
@@ -72,4 +72,4 @@ MIT © Alexandre Tiriba
 
 ---
 
-Desenvolvido com ❤️ por [Alexandre Tiriba](https://github.com/ElBigodon)
+Desenvolvido com ❤️ por [Alexandre Tiriba](https://github.com/muassab)

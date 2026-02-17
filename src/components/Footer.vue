@@ -18,7 +18,7 @@ const currentYear = new Date().getFullYear()
 
         <div class="flex items-center gap-4">
           <a
-            href="https://github.com/ElBigodon"
+            href="https://github.com/muassab"
             target="_blank"
             rel="noopener noreferrer"
             class="text-text-secondary hover:text-accent transition-colors"
