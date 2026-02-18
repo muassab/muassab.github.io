@@ -66,7 +66,7 @@ const timelineItems: TimelineItem[] = [
       <div class="relative">
         <!-- Timeline line -->
         <div
-          class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-translate-x-1/2"
+          class="absolute left-12 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-translate-x-1/2"
         ></div>
 
         <!-- Timeline items -->
