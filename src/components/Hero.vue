@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import type { SocialLink } from "@/@types";
+import { useMobile } from "@/composables/useMobile";
+import { computed } from "vue";
 import StatusIndicator from "./ui/StatusIndicator.vue";
 
 const socialLinks: SocialLink[] = [
@@ -19,6 +21,10 @@ const socialLinks: SocialLink[] = [
     icon: "lucide:mail",
   },
 ];
+
+const isMobile = useMobile();
+
+const statusOffset = computed((): [number, number] => (isMobile.value ? [0.5, 6] : [1, 8]));
 
 const countCareerYears = () => {
   const startAt = new Date("2015-01-01");
@@ -46,7 +52,7 @@ const scrollToContact = () => {
     <div class="max-w-4xl mx-auto text-center">
       <!-- Avatar -->
       <div class="mb-8 animate-fade-in-up opacity-0" style="animation-delay: 100ms">
-        <StatusIndicator :offset="[12, 22]">
+        <StatusIndicator :offset="statusOffset">
           <img
             src="https://github.com/muassab.png"
             alt="Alexandre Tiriba"
@@ -126,11 +132,6 @@ const scrollToContact = () => {
           <span class="i-lucide:square-arrow-out-up-right"></span>
         </a>
       </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-      <span class="i-lucide:chevron-down text-2xl text-text-secondary"></span>
     </div>
   </section>
 </template>
