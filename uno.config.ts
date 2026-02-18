@@ -82,7 +82,7 @@ export default defineConfig({
   shortcuts: [
     {
       "btn-primary":
-        "px-6 py-3 rounded-lg border border-accent text-accent hover:(bg-accent text-bg-primary) transition-all duration-300 cursor-pointer",
+        "px-6 py-3 rounded-lg border border-accent text-accent hover:(bg-accent text-primary) transition-all duration-300 cursor-pointer",
       "btn-solid":
         "px-6 py-3 rounded-lg bg-accent text-white hover:bg-accent-hover transition-all duration-300 cursor-pointer",
       card: "bg-bg-card border border-border rounded-xl p-6",
