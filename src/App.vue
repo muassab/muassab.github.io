@@ -2,6 +2,7 @@
 import Hero from './components/Hero.vue'
 import Timeline from './components/Timeline.vue'
 import Skills from './components/Skills.vue'
+import Experience from './components/Experience.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 </script>
@@ -12,6 +13,7 @@ import Footer from './components/Footer.vue'
     <main>
       <Timeline />
       <Skills />
+      <Experience />
       <Contact />
     </main>
     <Footer />

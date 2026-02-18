@@ -61,6 +61,7 @@ export default defineConfig({
     "i-lucide:database",
     "i-lucide:container",
     "i-lucide:wrench",
+    "i-lucide:square-arrow-out-up-right",
   ],
   theme: {
     colors: {

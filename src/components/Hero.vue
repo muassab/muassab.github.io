@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { SocialLink } from '@/@types'
-import StatusIndicator from './ui/StatusIndicator.vue'
+import type { SocialLink } from '@/@types';
+import StatusIndicator from './ui/StatusIndicator.vue';
 
 const socialLinks: SocialLink[] = [
   {
@@ -77,7 +77,7 @@ const scrollToContact = () => {
       <!-- Bio -->
       <p class="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10 animate-fade-in-up opacity-0" style="animation-delay: 500ms">
         Apaixonado por programação, sempre voltado às tendências de tecnologias da web.
-        <span class="text-accent font-semibold">+{{ countCareerYears() }} anos de experiência</span> modernalizando e criando soluções digitais.
+        <span class="text-accent font-semibold">+{{ countCareerYears() }} anos de experiência</span> modernizando e criando soluções digitais.
       </p>
 
       <!-- Social Links -->
@@ -95,11 +95,21 @@ const scrollToContact = () => {
         </a>
       </div>
 
-      <!-- CTA Button -->
-      <div class="animate-fade-in-up opacity-0" style="animation-delay: 700ms">
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up opacity-0" style="animation-delay: 700ms">
         <button @click="scrollToContact" class="btn-solid text-lg">
           Entre em Contato
         </button>
+
+        <a
+          href="https://docs.google.com/document/d/18agvxTwLvp0AT2z2eaZ3mXKg8xOyBeUS/edit?usp=sharing&ouid=118260953596725361814&rtpof=true&sd=true"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary text-lg flex items-center justify-center gap-2 hover:text-white"
+        >
+          <span>Currículo</span>
+          <span class="i-lucide:square-arrow-out-up-right"></span>
+        </a>
       </div>
     </div>
 
