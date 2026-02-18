@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import type { SocialLink } from '@/@types';
-import StatusIndicator from './ui/StatusIndicator.vue';
+import type { SocialLink } from "@/@types";
+import StatusIndicator from "./ui/StatusIndicator.vue";
 
 const socialLinks: SocialLink[] = [
   {
-    name: 'GitHub',
-    url: 'https://github.com/muassab',
-    icon: 'lucide:github'
+    name: "GitHub",
+    url: "https://github.com/muassab",
+    icon: "lucide:github",
   },
   {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/alexandre-muassab-46607b216/',
-    icon: 'lucide:linkedin'
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/alexandre-muassab-46607b216/",
+    icon: "lucide:linkedin",
   },
   {
-    name: 'Email',
-    url: 'mailto:alexandremuassab@gmail.com',
-    icon: 'lucide:mail'
-  }
-]
+    name: "Email",
+    url: "mailto:alexandremuassab@gmail.com",
+    icon: "lucide:mail",
+  },
+];
 
 const countCareerYears = () => {
-  const startAt = new Date('2015-01-01');
+  const startAt = new Date("2015-01-01");
   const today = new Date();
 
   const diffYears = Math.floor(today.getFullYear() - startAt.getFullYear());
@@ -34,11 +34,11 @@ const countCareerYears = () => {
   }
 
   return diffYears;
-}
+};
 
 const scrollToContact = () => {
-  document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
-}
+  document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+};
 </script>
 
 <template>
@@ -56,32 +56,46 @@ const scrollToContact = () => {
       </div>
 
       <!-- Name -->
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in-up opacity-0" style="animation-delay: 200ms">
+      <h1
+        class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 animate-fade-in-up opacity-0"
+        style="animation-delay: 200ms"
+      >
         <span class="text-text-primary">Alexandre</span>
         <span class="text-accent"> Tiriba</span>
       </h1>
 
       <!-- Title -->
-      <p class="text-xl md:text-2xl text-text-secondary mb-6 font-mono animate-fade-in-up opacity-0" style="animation-delay: 300ms">
+      <p
+        class="text-xl md:text-2xl text-text-secondary mb-6 font-mono animate-fade-in-up opacity-0"
+        style="animation-delay: 300ms"
+      >
         Desenvolvedor Full Stack Web
       </p>
 
       <!-- Location -->
-      <p class="text-text-secondary mb-8 flex items-center justify-center gap-2 animate-fade-in-up opacity-0" style="animation-delay: 400ms">
-        <span class="i-lucide:map-pin text-accent">
-          
-        </span>
+      <p
+        class="text-text-secondary mb-8 flex items-center justify-center gap-2 animate-fade-in-up opacity-0"
+        style="animation-delay: 400ms"
+      >
+        <span class="i-lucide:map-pin text-accent"> </span>
         Salvador, Bahia - Brasil
       </p>
 
       <!-- Bio -->
-      <p class="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10 animate-fade-in-up opacity-0" style="animation-delay: 500ms">
+      <p
+        class="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10 animate-fade-in-up opacity-0"
+        style="animation-delay: 500ms"
+      >
         Apaixonado por programação, sempre voltado às tendências de tecnologias da web.
-        <span class="text-accent font-semibold">+{{ countCareerYears() }} anos de experiência</span> modernizando e criando soluções digitais.
+        <span class="text-accent font-semibold">+{{ countCareerYears() }} anos de experiência</span>
+        modernizando e criando soluções digitais.
       </p>
 
       <!-- Social Links -->
-      <div class="flex justify-center gap-4 mb-10 animate-fade-in-up opacity-0" style="animation-delay: 600ms">
+      <div
+        class="flex justify-center gap-4 mb-10 animate-fade-in-up opacity-0"
+        style="animation-delay: 600ms"
+      >
         <a
           v-for="link in socialLinks"
           :key="link.name"
@@ -96,10 +110,11 @@ const scrollToContact = () => {
       </div>
 
       <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up opacity-0" style="animation-delay: 700ms">
-        <button @click="scrollToContact" class="btn-solid text-lg">
-          Entre em Contato
-        </button>
+      <div
+        class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up opacity-0"
+        style="animation-delay: 700ms"
+      >
+        <button @click="scrollToContact" class="btn-solid text-lg">Entre em Contato</button>
 
         <a
           href="https://docs.google.com/document/d/18agvxTwLvp0AT2z2eaZ3mXKg8xOyBeUS/edit?usp=sharing&ouid=118260953596725361814&rtpof=true&sd=true"

@@ -1,41 +1,60 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import SectionTitle from './ui/SectionTitle.vue'
-import InfoCard from './ui/InfoCard.vue'
+import { ref } from "vue";
+import SectionTitle from "./ui/SectionTitle.vue";
+import InfoCard from "./ui/InfoCard.vue";
 
 const formData = ref({
-  name: '',
-  email: '',
-  message: ''
-})
+  name: "",
+  email: "",
+  message: "",
+});
 
-const isSubmitting = ref(false)
+const isSubmitting = ref(false);
 
 const handleSubmit = async () => {
-  isSubmitting.value = true
-  await new Promise(resolve => setTimeout(resolve, 1000))
+  isSubmitting.value = true;
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  const subject = encodeURIComponent(`Contato do Portfólio - ${formData.value.name}`)
-  const body = encodeURIComponent(formData.value.message)
-  window.location.href = `mailto:alexandremuassab@gmail.com?subject=${subject}&body=${body}`
+  const subject = encodeURIComponent(`Contato do Portfólio - ${formData.value.name}`);
+  const body = encodeURIComponent(formData.value.message);
+  window.location.href = `mailto:alexandremuassab@gmail.com?subject=${subject}&body=${body}`;
 
-  isSubmitting.value = false
-  formData.value = { name: '', email: '', message: '' }
-}
+  isSubmitting.value = false;
+  formData.value = { name: "", email: "", message: "" };
+};
 
 const contactInfo = [
-  { icon: 'lucide:mail', label: 'Email', value: 'alexandremuassab@gmail.com', href: 'mailto:alexandremuassab@gmail.com' },
-  { icon: 'lucide:github', label: 'GitHub', value: 'github.com/muassab', href: 'https://github.com/muassab', external: true },
-  { icon: 'lucide:linkedin', label: 'LinkedIn', value: 'Alexandre Muassab', href: 'https://www.linkedin.com/in/alexandre-muassab-46607b216/', external: true },
-  { icon: 'lucide:map-pin', label: 'Localização', value: 'Salvador, Bahia - Brasil' }
-]
+  {
+    icon: "lucide:mail",
+    label: "Email",
+    value: "alexandremuassab@gmail.com",
+    href: "mailto:alexandremuassab@gmail.com",
+  },
+  {
+    icon: "lucide:github",
+    label: "GitHub",
+    value: "github.com/muassab",
+    href: "https://github.com/muassab",
+    external: true,
+  },
+  {
+    icon: "lucide:linkedin",
+    label: "LinkedIn",
+    value: "Alexandre Muassab",
+    href: "https://www.linkedin.com/in/alexandre-muassab-46607b216/",
+    external: true,
+  },
+  { icon: "lucide:map-pin", label: "Localização", value: "Salvador, Bahia - Brasil" },
+];
 </script>
 
 <template>
   <section id="contact" class="py-20 px-6 bg-secondary">
     <div class="max-w-4xl mx-auto">
-      <SectionTitle description="Tem um projeto em mente ou quer trocar uma ideia? Ficarei feliz em conversar!">
-        Entre em <span class='text-accent'>Contato</span>
+      <SectionTitle
+        description="Tem um projeto em mente ou quer trocar uma ideia? Ficarei feliz em conversar!"
+      >
+        Entre em <span class="text-accent">Contato</span>
       </SectionTitle>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -100,7 +119,7 @@ const contactInfo = [
             >
               <span v-if="isSubmitting" class="i-lucide:loader-2 animate-spin"></span>
               <span v-else class="i-lucide:send"></span>
-              {{ isSubmitting ? 'Enviando...' : 'Enviar Mensagem' }}
+              {{ isSubmitting ? "Enviando..." : "Enviar Mensagem" }}
             </button>
           </form>
         </div>

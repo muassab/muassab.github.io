@@ -1,14 +1,14 @@
 {
   "name": "portfolio-alexandre-tiriba",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "lint": "oxlint src/**/*.{vue,ts,css}",
-    "format": "oxlint --fix src/**/*.{vue,ts,css}"
+    "format": "oxfmt src/**/*.{vue,ts,css}"
   },
   "dependencies": {
     "vue": "^3.4.0"
